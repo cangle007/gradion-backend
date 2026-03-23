@@ -17,22 +17,13 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",
-    "bcryptjs": "^3.0.3",
     "body-parser": "^2.2.2",
-    "boom": "^7.3.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
-    "humps": "^2.0.1",
     "jsonwebtoken": "^9.0.3",
     "knex": "^3.1.0",
-    "lodash.isfunction": "^3.0.9",
-    "lodash.omit": "^4.5.0",
-    "lodash.pick": "^3.1.0",
     "morgan": "^1.10.1",
-    "pg": "^8.20.0",
-    "pluralize": "^8.0.0",
-    "uuid": "^13.0.0",
-    "yup": "^1.7.1"
+    "pg": "^8.20.0"
   },
   "devDependencies": {
     "cross-env": "^10.1.0",
