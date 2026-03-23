@@ -8,7 +8,9 @@ module.exports = function ({ adminReportsController }) {
   router.use(authenticate, requireRole('admin'));
 
   router.get('/reports', adminReportsController.getAllReports);
+
   router.post('/reports/:id/approve', adminReportsController.approveReport);
+
   router.post('/reports/:id/reject', adminReportsController.rejectReport);
 
   return router;

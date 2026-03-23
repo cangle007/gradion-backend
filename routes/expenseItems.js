@@ -10,11 +10,14 @@ module.exports = function ({ expenseItemsController }) {
     '/reports/:reportId/items',
     expenseItemsController.getItemsByReportId,
   );
+
   router.post('/reports/:reportId/items', expenseItemsController.createItem);
+
   router.patch(
     '/reports/:reportId/items/:itemId',
     expenseItemsController.updateItem,
   );
+
   router.delete(
     '/reports/:reportId/items/:itemId',
     expenseItemsController.deleteItem,
