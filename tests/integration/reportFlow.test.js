@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../../app');
+const app = require('../../server');
 const { knex, resetDatabase } = require('./setupTestDb');
 const createAdminUser = require('./helpers/createAdminUser');
 
