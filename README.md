@@ -37,6 +37,7 @@ cd <repo-name>
 ### 2. Start the application
 
 ```bash
+docker compose down -v
 docker compose up --build
 ```
 
@@ -51,7 +52,7 @@ This will:
 ### 3. Seed the database
 
 ```bash
-docker compose exec app npm run seed
+docker compose exec app npx knex seed:run
 ```
 
 This creates two seed accounts (password for both: `password123`):
@@ -144,7 +145,7 @@ TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoieW91QGV4YW1w
 
 **Option B - let the shell extract it automatically (requires `jq`):**
 
-> Seed accounts must exist first. Run `docker compose exec app npm run seed`, or replace the emails below with the account you signed up with.
+> Seed accounts must exist first. Run `docker compose exec app npx knex seed:run`, or replace the emails below with the account you signed up with.
 
 ```bash
 # Regular user token
