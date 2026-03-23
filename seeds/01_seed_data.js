@@ -1,11 +1,6 @@
 const bcrypt = require('bcrypt');
 
 exports.seed = async function (knex) {
-  // Delete child records first because of foreign keys
-  // await knex('expense_items').del();
-  // await knex('expense_reports').del();
-  // await knex('users').del();
-
   await knex.raw(
     'TRUNCATE expense_items, expense_reports, users RESTART IDENTITY CASCADE',
   );
