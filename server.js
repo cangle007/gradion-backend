@@ -9,9 +9,7 @@ const bodyParser = require('body-parser'); //You need to use bodyParser() if you
 app.disable('x-powered-by');
 
 const cors = require('cors'); //It is a standard for allowing browsers to request resources from apis on other domains.
-//const bodyParser = require('body-parser'); dont delete this
 const morgan = require('morgan'); //HTTP request logger middleware for node.js. You could see the logs in the terminal for each time an HTTP request was made
-//const cookieParser = require('cookie-parser');
 
 switch (process.env.NODE_ENV) {
   case 'development':
@@ -25,7 +23,6 @@ switch (process.env.NODE_ENV) {
 
 app.use(bodyParser.json());
 app.use(cors());
-//app.use(cookieParser());
 
 // Routes
 const authController = require('./instances/authController');
