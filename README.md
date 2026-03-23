@@ -37,9 +37,7 @@ cd <repo-name>
 ### 2. Start the application
 
 ```bash
-docker compose down -v
 docker compose up --build
-
 ```
 
 This will:
@@ -67,11 +65,32 @@ This creates two seed accounts (password for both: `password123`):
 
 ## Running Tests
 
-Tests run against a separate local test database. Make sure PostgreSQL is running and `TEST_DATABASE_URL` in `.env.test` is correct.
+Tests run against a separate local test database (`expense_reports_test`). The Docker database container must be running before you do this.
+
+### 1. Make sure the app is running
+
+```bash
+docker compose up -d
+```
+
+### 2. Create the test database
+
+You only need to do this once:
+
+```bash
+docker compose exec db psql -U postgres -c "CREATE DATABASE expense_reports_test;"
+```
+
+### 3. Run migrations against the test database
+
+```bash
+NODE_ENV=test npx knex migrate:latest
+```
+
+### 4. Run the tests
 
 ```bash
 npm install
-NODE_ENV=test npx knex migrate:latest
 npm test
 ```
 

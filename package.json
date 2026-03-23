@@ -27,7 +27,7 @@
     "knex": "^3.1.0",
     "lodash.isfunction": "^3.0.9",
     "lodash.omit": "^4.5.0",
-    "lodash.pick": "^4.4.0",
+    "lodash.pick": "^3.1.0",
     "morgan": "^1.10.1",
     "pg": "^8.20.0",
     "pluralize": "^8.0.0",
